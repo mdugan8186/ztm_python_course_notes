@@ -1,0 +1,26 @@
+# ==== exercise: @authenticated ====
+
+# Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
+user1 = {
+    'name': 'Sorna',
+    # changing this will either run or not run the message_friends function. (True or False)
+    'valid': False
+}
+
+
+def authenticated(fn):
+    # answer below
+    def wrapper(*args, **kwargs):
+        if args[0]['valid']:
+            return fn(*args, **kwargs)
+        else:
+            print('invalid user')
+    return wrapper
+
+
+@authenticated
+def message_friends(user):
+    print('message has been sent')
+
+
+message_friends(user1)
