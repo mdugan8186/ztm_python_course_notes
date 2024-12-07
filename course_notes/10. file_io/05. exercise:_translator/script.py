@@ -1,7 +1,7 @@
 # ==== exercise: translator ====
 
 # import the module
-# from translate import Translator
+from translate import Translator
 # you may have to change your python interpreter selection so that the import works
 
 # you can see other languages inside the documentation

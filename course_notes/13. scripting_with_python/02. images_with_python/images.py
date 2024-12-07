@@ -4,7 +4,7 @@ from PIL import Image, ImageFilter
 
 # we will create a variable then use open to open the image. inside open we will use the filepath for the image
 img = Image.open(
-    './13. scripting_with_python/2. images_with_python/pokedex/pikachu.jpg')
+    './13. scripting_with_python/02. images_with_python/pokedex/pikachu.jpg')
 
 
 print(img)
