@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <!-- adding a favicon -->
+    <!-- the double curly brackets are a flask expression -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='alien.ico') }}"
+    />
+  </head>
+  <body>
+    <!-- flask looks at the double curly brackets and says this is an expression (a python expression) that i need to evaluate  -->
+    <!-- this adds a name to the homepage -->
+    {{ name }} {{post_id}}
+    <script src="static/script.js"></script>
+  </body>
+</html>
+
+<!-- under the hood flask uses something called jinja, a templating language. its a way for us to do things like the double curly brackets. flask comes built in with this -->
